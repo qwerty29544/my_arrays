@@ -165,15 +165,15 @@ void complex128_matrix_diff_matrix(double complex **array_1, double complex **ar
 
 // -------------------------------------------------------------
 // array fill random value -------------------------------------
-void float_array_fill_random_uniform(float *array, int size, float from, float to);
-void double_array_fill_random_uniform(double *array, int size, double from, double to);
-void complex64_array_fill_random_uniform(float complex *array, int size, float from, float to);
-void complex128_array_fill_random_uniform(double complex *array, int size, double from, double to);
+void float_array_fill_random_uniform(float *array, int size, float from, float to, int seed);
+void double_array_fill_random_uniform(double *array, int size, double from, double to, int seed);
+void complex64_array_fill_random_uniform(float complex *array, int size, float from, float to, int seed);
+void complex128_array_fill_random_uniform(double complex *array, int size, double from, double to, int seed);
 
-void float_matrix_fill_random_uniform(float **array, int nrows, int ncols, float from, float to);
-void double_matrix_fill_random_uniform(double **array, int nrows, int ncols, double from, double to);
-void complex64_matrix_fill_random_uniform(float complex **array, int nrows, int ncols, float from, float to);
-void complex128_matrix_fill_random_uniform(double complex **array, int nrows, int ncols, double from, double to);
+void float_matrix_fill_random_uniform(float **array, int nrows, int ncols, float from, float to, int seed);
+void double_matrix_fill_random_uniform(double **array, int nrows, int ncols, double from, double to, int seed);
+void complex64_matrix_fill_random_uniform(float complex **array, int nrows, int ncols, float from, float to, int seed);
+void complex128_matrix_fill_random_uniform(double complex **array, int nrows, int ncols, double from, double to, int seed);
 
 // -------------------------------------------------------------
 // Array array dot product -------------------------------------
@@ -188,12 +188,13 @@ void double_matrix_array_multiplication(double **matrix, double *array, double *
 void complex64_matrix_array_multiplication(float complex **matrix, float complex *array, float complex *result, int nrow, int ncol);
 void complex128_matrix_array_multiplication(double complex **matrix, double complex *array, double complex *result, int nrow, int ncol);
 // -------------------------------------------------------------
-dv init_dv(double* vector, int len);
+     
+void float_array_print(float *array, int size);
+void double_array_print(double *array, int size);
+void complex64_array_print(float complex *array, int size);
+void complex128_array_print(double complex *array, int size);
 
-void print_dv(dv obj);
-
-void free_dv(dv str);
-
-dv arange_dv(double start, double stop, double step);
-
-dv fill_dv(double fill_value, int len);        
+void float_matrix_print(float **matrix, int nrows, int ncols);
+void double_matrix_print(double **matrix, int nrows, int ncols);
+void complex64_matrix_print(float complex **matrix, int nrows, int ncols);
+void complex128_matrix_print(double complex **matrix, int nrows, int ncols);

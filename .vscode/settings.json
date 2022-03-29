@@ -2,5 +2,6 @@
     "files.associations": {
         "stdio.h": "c",
         "double_vector.h": "c"
-    }
+    },
+    "cmake.configureOnOpen": true
 }
